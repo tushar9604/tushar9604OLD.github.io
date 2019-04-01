@@ -1,5 +1,42 @@
 $(document).ready(function(){
-    const Url = "http://localhost:3001/api/delivery.Warehouse";
+    const Url = "http://193.168.0.199:3001/api/delivery.Warehouse";
+
+
+    $('.btn-primary').click(function(){
+        var data = $('#AddWarehouse').serializeArray()
+        var correctData = {"$class":"delivery.Warehouse",
+                           "holderId": "Warehouse"+ Math.floor((Math.random()*1000) + 1),
+                        }
+        for(obj of data){
+            correctData[obj.name] = obj.value; 
+        }
+        // console.log(data)
+       // console.log(correctData)
+
+        $.ajax({
+            url: Url,
+            type: "POST",
+            data: correctData,
+            success: function(result){
+               // console.log(data)
+                console.log(result);
+                alert('Warehouse added in network');
+                location.reload();
+            },
+            error:function(error){
+                console.log(correctData)
+                console.log(error.responseText)
+            }
+        })        
+    })
+
+    $('.btn-secondary').click(function(){
+        location.reload();
+    })
+})
+    
+    /**
+    $('#ViewAllWarehouse').click(function(){
         
         $.ajax({
             url: Url,
@@ -8,24 +45,9 @@ $(document).ready(function(){
                 
                 console.log(result);
                 var data = result;
-                var htmlText = '<table class="table"><tr>'
-                htmlText += '<th>Id</th>'
-                htmlText += '<th>User Id</th>'
-                htmlText += '<th>Name</th>'
-                htmlText += '<th>Address</th>'
-                htmlText += '<th>Latitude</th>'
-                htmlText += '<th>Longitude</th>'
-                htmlText += '<th>Contact Number</th></tr>'
-
+                var htmlText = ' '
                 for (var key in data){
-                    htmlText += '<tr><td>'+data[key].id+'</td>'
-                    htmlText += '<td>'+data[key].userId+'</td>'
-                    htmlText += '<td>'+data[key].name+'</td>'
-                    htmlText += '<td>'+data[key].address+'</td>'
-                    htmlText += '<td>'+data[key].latitude+'</td>'
-                    htmlText += '<td>'+data[key].longitude+'</td>'
-                    htmlText += '<td>'+data[key].number+'</td></tr>'
-                /*
+
                 htmlText += '<table><tbody">'
                 htmlText += '<tr><th>Id:&nbsp&nbsp</th>' + '<td>'+ data[key].id + '</td><td>&nbsp&nbsp&nbsp &nbsp</td></tr>';
                 htmlText += '<tr><th>User Id:&nbsp&nbsp</th>' + '<td>'+ data[key].userId + '</td><td>&nbsp&nbsp&nbsp&nbsp </td></tr>';
@@ -35,7 +57,6 @@ $(document).ready(function(){
                 htmlText += '<tr><th>Longitude:&nbsp&nbsp</th>' + '<td>'+ data[key].longitude + '</td><td>&nbsp&nbsp&nbsp&nbsp</td></tr>';
                 htmlText += '<tr><th>Contact Number:&nbsp&nbsp</th>' + '<td>'+ data[key].number +'</td><td>&nbsp&nbsp&nbsp&nbsp</td></tr>';
                 htmlText += '<tr><th><br/></th>' + '<td></td><td></td></tr></tbody></table><p></p>';
-                */
 
                 }
                 // document.getElementById('BTN').innerHTML = "<button id='btn' type='button'>Reset</button>"
@@ -49,11 +70,12 @@ $(document).ready(function(){
                 $('#btn').click(function(){
                     location.reload();
                 })
-                */
+                
             },
             error:function(error){
                 console.log(error.responseText)
             }
 
         })        
-})
+    })
+    */

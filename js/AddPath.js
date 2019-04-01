@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const Url = "http://localhost:3001/api/delivery.Contract"
+    const Url = "http://193.168.0.199:3001/api/delivery.Contract"
     $('#btn-add').click(function(){
         var html = "";
         html += '<div class="row">'
