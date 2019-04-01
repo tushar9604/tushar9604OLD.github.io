@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const Url = "http://localhost:3001/api/delivery.PlaceOrder";
+    const Url = "https://193.168.0.199:3001/api/delivery.PlaceOrder";
 
 
     $('.btn-primary').click(function(){
