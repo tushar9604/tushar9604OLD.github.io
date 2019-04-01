@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const Url = "http://193.168.0.199:3001/api/delivery.Order";
+    const Url = "http://localhost:3001/api/delivery.Order";
 
         $.ajax({
             url: Url,
@@ -46,9 +46,6 @@ $(document).ready(function(){
                 })
             */
             document.getElementById('ListOrder').innerHTML = htmlText
-            document.getElementById('change1').innerHTML = "All Orders"
-            document.getElementById('change2').innerHTML = "Order Details"
-            document.getElementById('change3').innerHTML = " "
             },
             error:function(error){
                 console.log(error.responseText)
