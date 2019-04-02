@@ -42,3 +42,13 @@ else{
 myButton.onclick = function(){
     setUserName();
 }
+
+document.getElementById('media-load').onclick=function(){
+var mediaElem = document.getElementById("my-media-element");
+mediaElem.load();
+}
+
+document.getElementById('media-load').onclick=function(){
+var mediaElem = document.getElementById("my-media-element2");
+mediaElem.load();
+}

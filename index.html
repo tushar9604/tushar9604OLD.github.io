@@ -71,7 +71,7 @@
   <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
     Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
   <!--I am inside a comment.-->
-  <script src="scripts/main.js"></script>
+  
 
   <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
     <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
@@ -150,7 +150,23 @@
     But his structure was bad, his semantics were sad<br>
     and his markup didn't read very well.</p>
 
-  
+  <figure>
+    <video id='my-media-element2' controls width="400" height="400" preload autoplay loop muted poster="images/poster.png">
+      <source src="videos/rabbit320.mp4" type="video/mp4">
+      <source src="videos/rabbit320.webm" type="video/webm">
+      <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    </video>
+    <h2><figcaption>Above is a simple video example</figcaption></h2>
+  </figure>
 
+  <figure>
+    <audio controls preload autoplay id='my-media-element'>
+      <source src="audio/viper.mp3" type="audio/mp3">
+      <source src="audio/viper.ogg" type="audio/ogg">
+      <p>Your browser doesn't support HTML5 audio. Here is a <a href="audio/viper.mp3">link to the audio</a> instead.</p>
+    </audio>
+  </figure>
+  <button id="media-load">Load again</button>
+  <script src="scripts/main.js"></script>
 </body>
 </html>	
