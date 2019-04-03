@@ -19,6 +19,7 @@
        <li><a href="debug-example.html" title="see debuging in html">debug-example</a></li>
        <li><a href="letter-example.html" title="see letter markup in html">letter-example</a></li>
        <li><a href="video-with-captions.html" title="see video with captions example,">Video with captions,(captions doesn't show in chrome)</a></li>
+       <li><a href="multimedia-and-embedding.html">Multimedia and embedding example from mdn</a></li>
      </ol>
    </nav>
   <h1>Mozilla is cool</h1>
@@ -171,7 +172,52 @@
   </figure>   
 
   <button id="media-load">Load again</button>
+
+  <iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
+          width="100%" height="500" frameborder="0"
+          allowfullscreen sandbox>
+    <p><a href="https://developer.mozilla.org/en-us/docs/Glossary">
+      Fallback link for browsers that don't support iframes
+    </a></p>      
+  </iframe>
   
+  <svg version="1.1"
+       baseProfile="full"
+       width="300" height="200"
+       xmlns="https://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="black"/>
+    <circle cx="150" cy="100" r="90" fill="blue"/>
+   </svg>
+  
+  <img
+   src="equilateral.svg"
+   alt="triangle with all three sides equal"
+   height="87px"
+   width="100px" />
   <script src="scripts/main.js"></script>
+
+ <!--For older browsers use src and new browsers srcset-->
+ <img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg">
+
+
+ <svg width="300" height="200">
+   <rect width="100%" height="100%" fill="green"/>
+ </svg>
+
+ <!--responsive images-->
+ <img srcset="images/elva-fairy-320w.jpg 320w,
+              images/elva-fairy-480w.jpg 480w,
+              images/elva-fairy-800w.jpg 800w"
+      sizes="(max-width: 320px) 280px,
+             (max-width: 480px) 400px,
+              800px "
+      src="images/elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+
+  <!--art direction problem-->
+  <picture>
+      <source media="(max-width: 799px)" srcset="images/elva-480w-close-portrait.jpg">
+      <source media="(min-width: 800px)" srcset="images/elva-800w.jpg">
+      <img src="images/elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+    </picture>
 </body>
 </html>	
