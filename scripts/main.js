@@ -46,9 +46,11 @@ myButton.onclick = function(){
 document.getElementById('media-load').onclick=function(){
 var mediaElem = document.getElementById("my-media-element");
 mediaElem.load();
+var mediaElem2 = document.getElementById("my-media-element2");
+mediaElem2.load();
 }
 
-document.getElementById('media-load').onclick=function(){
-var mediaElem = document.getElementById("my-media-element2");
-mediaElem.load();
+var mediaElem = document.querySelector("video");
+mediaElem.audioTracks.onaddtrack = function(event) {
+  audioTrackAdded(event.track);
 }
