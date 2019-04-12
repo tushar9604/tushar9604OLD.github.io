@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Single line text field examples</title>
+</head>
+<body>
+    <form>
+        <p>
+            <label for="comment">Add a comment here:</label>
+            <input type="text" id="comment" name="comment" value="I am a text field">
+        </p>
+        <p>
+            <label for="email">Enter your email address:</label>
+            <input type="email" id="email" name="email" multiple placeholder="hello@example.com">
+        </p>
+        <p>
+            <lable for="pwd">Enter your password:</lable>
+            <input type="password" id="pwd" name="pwd">
+        </p>
+        <p>
+            <label for="search">Search:</label>
+            <input type="search" id="search" name="tel">
+        </p>
+        <p>
+            <label for="url">Web address:</label>
+            <input type="url" id="url" name="url">
+        </p>
+
+        <p>
+            <label for="comment" style="vertical-align: top">Enter your comments here</label>
+            <textarea cols="30" rows="10" id="comment">Write here</textarea>
+        </p>
+
+        <p>
+            <label for="simple">A simple select box:</label>
+            <select id="simple" name="simple">
+            <option>Banana</option>
+            <option>Cherry</option>
+            <option>Lemon</option>
+            </select>
+        </p>
+        <p>
+            <lable for="groups">Select box with option groups:</lable>
+            <select id="groups" name="groups">
+            <optgroup label="fruits">
+                <option>Banana</option>
+                <option selected>Cherry</option>
+                <option>Lemon</option>
+            </optgroup>
+            <optgroup label="vegetables">
+                <option>Carrot</option>
+                <option>Eggplant</option>
+                <option>Potato</option>
+            </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="multi">Select box allowing multiple selections:</label>
+            <select multiple id="multi" name="multi">
+                <option>Banana</option>
+                <option>Cherry</option>
+                <option>Lemon</option>
+            </select>
+        </p>
+        <p>
+            <label for="myFruit">What is your favorite fruit?</label>
+            <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+            <datalist id="mySuggestion">
+                <option>Apple</option>
+                <option>Banana</option>
+                <option>Blackberry</option>
+                <option>Blueberry</option>
+                <option>Lemon</option>
+                <option>Lychee</option>
+                <option>Peach</option>
+                <option>Pear</option>
+            </datalist>
+        </p>
+        
+        <p>
+            <label for="myFruit">What is your favorite fruit? (With fallback)</label>
+            <input type="text" id="myFruit" name="fruit" list="fruitList">
+            <datalist id="fruitList"> <label for="suggestion">or pick a fruit</label>
+            <select id="suggestion" name="altFruit">
+                <option>Apple</option>
+                <option>Banana</option>
+                <option>Blueberry</option>
+                <option>Blackberry</option>
+                <option>Lemon</option>
+                <option>Lychee</option>
+                <option>Peach</option>
+                <option>Pear</option>
+            </select>
+            </datalist>
+        </p>
+
+        <fieldset>
+            <legend>Choose all the vegetables you like to eat</legend>
+            <ul>
+                <li>
+                    <label for="carrots">Carrots</label>
+                    <input type="checkbox" checked id="carrots" name="carrots" value="carrots">
+                </li>
+                <li>
+                    <label for="peas">Peas</label>
+                    <input type="checkbox" id="peas" name="peas" value="peas">
+                </li>
+                <li>
+                    <label for="cabbage">Cabbage</label>
+                    <input type="checkbox" id="cabbage" name="cabbage" value="cabbage">
+                </li>
+                <li>
+                    <label for="cauli">Cauliflower</label>
+                    <input type="checkbox" id="cauli" name="cauli" value="cauli">
+                </li>
+                <li>
+                    <label for="broc">Broccoli</label>
+                    <input type="checkbox" id="broc" name="broc" value="broc">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>What is your favorite meal?</legend>
+            <ul>
+                <li>
+                    <label for="soup">Soup</label>
+                    <input type="radio" checked id="soup" name="meal" value="soup">
+                </li>
+                <li>
+                    <label for="curry">Curry</label>
+                    <input type="radio" id="curry" name="meal" value="curry">
+                </li>
+                <li>
+                    <label for="pizza">Pizza</label>
+                    <input type="radio" id="pizza" name="meal" value="pizza">
+                </li>
+                <li>
+                    <label for="tacos">Tacos</label>
+                    <input  type="radio" id="tacos" name="meal" value="tacos"> 
+                </li>
+                <li>
+                    <label for="bolognaise">Bolognaise</label>
+                    <input type="radio" id="bolognaise" name="meal" value="bolognaise"> 
+                </li>
+            </ul>
+        </fieldset>
+
+        <!--advanced examples for input element types-->
+        <p>
+            <label for="age">What is your age?</label>
+            <input type="number" id="age" min="1" max="10" step="2" name="age">  
+        </p>
+
+        <p>
+            <label for="beans">Beans</label>
+            <input type="range" name="beans" id="beans" min="0" max="500" step="10" value="100">
+            <span class="beancount"></span>
+        </p>
+
+        <p>
+            <label for="myDate">When are you available this summer?</label>
+            <input type="date" name="myDate" min="2013-06-01" max="2013-08-31" id="myDate">
+        </p>
+
+        <p>
+            <label for="meet">When shall we have the meeting?</label>
+            <input type="datetime-local" name="meet" id="meet">
+        </p>
+        
+        <p>
+            <label for='month'>What month is your favorite?</label>
+            <input type="month" name="month" id="month">
+        </p>
+
+        <p>
+            <label for="time">Set the time for your wifi fridge</label>
+            <input type="time" name="time" id="time">
+        </p>
+
+        <p>
+            <label for="color">What is your favourite color?</label>
+            <input type="color" name="color" id="color">
+        </p>
+
+        <!--Other examples of input types-->
+        <p>
+            <label for="file">Choose an image to upload</label>
+            <input type="file" name="file" id="file" accept='image/*' multiple>
+        </p>
+
+        <div>
+            <input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+        </div>
+
+        <p>
+            <input type="image" name="pos" alt="" src="map.png">
+        </p>
+
+        <p>
+            <progress max="100" value="75">75/100</progress>
+        </p>
+
+        <p>
+            <meter min="0" max="100" value='75' low="33" high='66' optimum="50">50</meter>
+        </p>
+        <!--Buttons-->
+
+        <p>
+            <button type="submit">
+                This is a <br><strong>submit button</strong>                
+            </button>
+        </p>
+        <p>
+            <input type="submit" value="This is a submit buton">
+        </p>
+        <p>
+            <button type="reset">
+                This is a <br><strong>reset button</strong>
+            </button>
+        </p>
+        <p>
+            <input type="reset" value="This is a reset button">
+        </p>
+        <p>
+            <button type="button">
+                This is <br><strong>anonymous button</strong>
+            </button>
+        </p>
+        <p>
+            <input  type="button" value="This is an anonymous button">
+        </p>
+
+    </form>
+    <script>
+        var beans= document.querySelector('#beans');
+        var count = document.querySelector('.beancount');
+        count.textContent = 100;
+        beans.oninput = function(){count.textContent = beans.value;}
+    </script>
+</body>
+</html>
